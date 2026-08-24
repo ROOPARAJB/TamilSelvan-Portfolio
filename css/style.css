@@ -805,7 +805,7 @@ footer{padding:32px 0; border-top:1px solid var(--border); background:#ffffff; p
   transform: translate3d(-200px, -200px, 0);
   will-change: transform;
 }
-/* Touch / Mobile Cursor Fix: Disable custom cursor on mobile/touch screens for pure 120fps native touch feel */
+
 @media (hover: none), (max-width: 920px) {
   #cursor {
     display: none !important;
@@ -816,40 +816,68 @@ footer{padding:32px 0; border-top:1px solid var(--border); background:#ffffff; p
 }
 
 /* ================================================================
-   MOBILE & TABLET RESPONSIVENESS POLISH (320px - 768px)
+   CLEAN & UNIFIED MOBILE RESPONSIVENESS (All Screen Sizes)
    ================================================================ */
+@media (max-width: 980px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .hv-dash, .hv-tool, .t-rank {
+    display: none !important;
+  }
+}
+
 @media (max-width: 768px) {
+  .wrap {
+    padding: 0 20px;
+  }
   section {
-    padding: 60px 0;
+    padding: 70px 0;
   }
   .head-row {
     margin-bottom: 36px;
-    gap: 20px;
+    gap: 16px;
   }
   .sec-heading {
-    font-size: clamp(26px, 6.5vw, 38px);
+    font-size: clamp(28px, 6.8vw, 40px);
     margin-bottom: 12px;
   }
   .sec-sub {
     font-size: 15px;
     line-height: 1.65;
   }
-  
-  /* Hero on mobile */
+
+  /* Hero Section Alignment (Left Aligned for Perfect Consistency) */
   #hero {
     min-height: auto;
-    padding-top: 96px;
+    padding-top: 100px;
     padding-bottom: 50px;
   }
+  .hero-left {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.09em;
+    padding: 5px 14px;
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.4;
+  }
   .hero-h1 {
-    font-size: clamp(28px, 7.5vw, 44px);
+    font-size: clamp(28px, 7.5vw, 46px);
     line-height: 1.15;
     margin: 10px 0 16px;
+    text-align: left;
+    word-break: break-word;
   }
   .hero-desc {
-    font-size: 14.5px;
+    font-size: 15px;
     line-height: 1.65;
     margin-bottom: 24px;
+    text-align: left;
   }
   .hero-btns {
     flex-direction: column;
@@ -860,11 +888,9 @@ footer{padding:32px 0; border-top:1px solid var(--border); background:#ffffff; p
   .hero-btns .btn {
     width: 100%;
     padding: 14px 24px;
-    font-size: 14px;
   }
-  
   .tech-row {
-    justify-content: center;
+    justify-content: flex-start;
     gap: 8px;
     margin-bottom: 24px;
   }
@@ -872,46 +898,44 @@ footer{padding:32px 0; border-top:1px solid var(--border); background:#ffffff; p
     padding: 6px 12px;
     font-size: 11.5px;
   }
-
   .hero-badges {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-    max-width: 100%;
+    width: 100%;
   }
   .stat-card {
     padding: 12px 8px;
     text-align: center;
   }
   .stat-card .n {
-    font-size: 17px;
+    font-size: 16px;
   }
   .stat-card .l {
-    font-size: 9.5px;
-    line-height: 1.3;
+    font-size: 9px;
   }
 
-  /* Hero stage mobile */
+  /* Hero Stage */
   .hero-visual {
-    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     min-height: 380px;
   }
   .hv-stage {
-    max-width: 310px;
+    max-width: 290px;
     height: 380px;
   }
   .hv-frame {
     width: 210px;
     height: 310px;
-    border-radius: 120px 120px 28px 28px;
+    border-radius: 130px 130px 30px 30px;
   }
   .hv-portrait {
     width: 106%;
-    bottom: -2%;
   }
   .hv-platform {
     width: 220px;
     height: 50px;
-    bottom: 2%;
   }
   .hv-avail {
     bottom: -15px;
@@ -919,35 +943,12 @@ footer{padding:32px 0; border-top:1px solid var(--border); background:#ffffff; p
     padding: 6px 14px;
   }
 
-  /* About on mobile */
-  .about-grid {
-    gap: 32px;
-  }
-  .id-card {
-    padding: 24px 18px;
-  }
-  .sig-name {
-    font-size: 38px;
-  }
-  .strength-list {
+  /* Cards Grids on Mobile */
+  .about-grid, .skills-grid, .edu-grid, .cert-grid, .contact-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin: 20px 0;
+    gap: 20px;
   }
-  .strength {
-    padding: 18px;
-  }
-  .quote-card {
-    padding: 18px;
-    font-size: 14px;
-  }
-
-  /* Skills & Projects on mobile */
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .skill-card {
+  .id-card, .skill-card, .edu-card, .form-card, .c-info-card {
     padding: 24px 20px;
   }
   .metrics-bar {
@@ -956,200 +957,37 @@ footer{padding:32px 0; border-top:1px solid var(--border); background:#ffffff; p
     padding: 20px 16px;
     margin-top: 32px;
   }
-  .metric-col {
-    gap: 10px;
-  }
-  .metric-col .m-ic {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-  }
   .metric-col .m-val {
     font-size: 20px;
   }
   .metric-col .m-lbl {
-    font-size: 10.5px;
-  }
-
-  /* Experience & Education on mobile */
-  .edu-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .edu-card {
-    padding: 24px 20px;
-  }
-  .edu-card .status {
-    position: static;
-    display: inline-block;
-    margin-bottom: 12px;
-  }
-
-  /* Certifications on mobile */
-  .cert-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    font-size: 11px;
   }
   .cert-thumb {
-    height: 200px;
-  }
-
-  /* Contact on mobile */
-  .contact-grid {
-    gap: 28px;
-  }
-  .c-info-card {
-    padding: 16px 18px;
-  }
-  .form-card {
-    padding: 24px 18px;
-  }
-  
-  /* Modals on mobile */
-  .modal-box, .cert-lightbox-container {
-    padding: 24px 18px;
-    max-height: 88vh;
+    height: 190px;
   }
 }
 
 @media (max-width: 420px) {
+  .wrap {
+    padding: 0 16px;
+  }
   .hero-badges {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 8px;
   }
   .stat-card {
-    padding: 12px 16px;
+    padding: 10px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .stat-card .l {
-    margin-top: 0;
     text-align: right;
+    margin-top: 0;
   }
   .metrics-bar {
     grid-template-columns: 1fr;
     gap: 12px;
-  }
-}
-
-/* ================================================================
-   IPHONE SE & COMPACT MOBILE (320px - 480px) OVERFLOW ZERO-OUT
-   ================================================================ */
-@media (max-width: 640px) {
-  .wrap {
-    padding: 0 16px !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-    box-sizing: border-box !important;
-  }
-  header {
-    width: 100% !important;
-    max-width: 100vw !important;
-    overflow: hidden !important;
-  }
-  header .wrap {
-    padding: 0 16px !important;
-  }
-  .nav-inner {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-  }
-  .logo {
-    font-size: 15px !important;
-    gap: 8px !important;
-  }
-  .logo-mark {
-    width: 32px !important;
-    height: 32px !important;
-    font-size: 12px !important;
-  }
-  .burger {
-    width: 40px !important;
-    height: 40px !important;
-    flex-shrink: 0 !important;
-  }
-
-  /* Eyebrow fit without overflowing */
-  .eyebrow {
-    font-size: 9.5px !important;
-    letter-spacing: 0.08em !important;
-    padding: 5px 12px !important;
-    max-width: 100% !important;
-    white-space: normal !important;
-    text-align: center !important;
-    line-height: 1.35 !important;
-    display: inline-flex !important;
-    box-sizing: border-box !important;
-  }
-
-  .hero-h1 {
-    font-size: clamp(26px, 7.2vw, 36px) !important;
-    line-height: 1.16 !important;
-    width: 100% !important;
-    word-break: break-word !important;
-  }
-
-  .hero-desc {
-    font-size: 14px !important;
-    line-height: 1.6 !important;
-    width: 100% !important;
-    margin-bottom: 20px !important;
-  }
-
-  .hero-btns {
-    flex-direction: column !important;
-    width: 100% !important;
-    gap: 10px !important;
-  }
-  .hero-btns .btn {
-    width: 100% !important;
-    padding: 13px 20px !important;
-    font-size: 13.5px !important;
-    box-sizing: border-box !important;
-  }
-
-  .tech-row {
-    width: 100% !important;
-    justify-content: center !important;
-    gap: 6px !important;
-    margin-bottom: 20px !important;
-  }
-  .tech-pill {
-    padding: 5px 10px !important;
-    font-size: 11px !important;
-    gap: 6px !important;
-  }
-
-  .hero-badges {
-    width: 100% !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 6px !important;
-    box-sizing: border-box !important;
-  }
-  .stat-card {
-    padding: 10px 4px !important;
-    text-align: center !important;
-  }
-  .stat-card .n {
-    font-size: 15px !important;
-  }
-  .stat-card .l {
-    font-size: 8.5px !important;
-    line-height: 1.25 !important;
-  }
-
-  /* Hero stage viewport containment */
-  .hero-visual {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: hidden !important;
-  }
-  .hv-stage {
-    max-width: 280px !important;
-    height: 360px !important;
-    overflow: visible !important;
   }
 }
