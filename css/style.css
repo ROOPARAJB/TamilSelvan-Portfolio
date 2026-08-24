@@ -991,3 +991,41 @@ footer{padding:32px 0; border-top:1px solid var(--border); background:#ffffff; p
     gap: 12px;
   }
 }
+
+/* ================================================================
+   MOBILE GPU PERFORMANCE OPTIMIZATION (Pure 120FPS Zero-Lag)
+   ================================================================ */
+@media (max-width: 768px) {
+  /* Eliminate heavy multi-pass gaussian blurs on mobile */
+  .glow-orb {
+    animation: none !important;
+    filter: blur(50px) !important;
+    opacity: 0.6 !important;
+  }
+  .orb-1 { width: 340px; height: 340px; top: -60px; left: -40px; }
+  .orb-2 { width: 340px; height: 340px; top: 30%; right: -60px; }
+  .orb-3, .orb-4 { display: none !important; }
+
+  #bg-canvas {
+    display: none !important;
+  }
+  .spotlight {
+    display: none !important;
+  }
+
+  /* Disable heavy backdrop-filters on cards during scroll */
+  .glass {
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: 0 4px 14px rgba(5, 8, 20, 0.04) !important;
+  }
+
+  /* Disable heavy background rotational keyframes on mobile */
+  .hv-halo, .hv-rays, .hv-ring, .hv-platform-ring, .hv-smoke {
+    animation: none !important;
+  }
+  .hv-halo {
+    filter: blur(24px) !important;
+  }
+}

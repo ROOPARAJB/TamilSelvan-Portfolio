@@ -297,7 +297,7 @@ function initApp() {
 
   /* ---------- Background Micro Ambient Dots Canvas ---------- */
   const canvas = document.getElementById('bg-canvas');
-  if (canvas) {
+  if (canvas && window.innerWidth > 768) {
     const ctx = canvas.getContext('2d');
     let w, h, particles = [];
 
