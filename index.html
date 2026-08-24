@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TamilSelvan V | SEO Specialist &amp; WordPress Developer</title>
+<meta name="description" content="TamilSelvan V — SEO Specialist, WordPress Developer &amp; Digital Marketing Executive. Technical SEO, Local SEO, WordPress optimization and analytics-driven growth." />
+
+<!-- Fonts: Plus Jakarta Sans, Playfair Display, Sora, JetBrains Mono & Dancing Script -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Ambient Fluid Glow Engine -->
+<div class="ambient-glow-container" aria-hidden="true">
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+  <div class="glow-orb orb-4"></div>
+  <div class="grid-overlay"></div>
+  <canvas id="bg-canvas"></canvas>
+  <div class="spotlight" id="spotlight"></div>
+</div>
+
+<div id="loader">
+  <div class="lm">TAMIL<span>SELVAN</span>&nbsp;V</div>
+  <div class="bar"><i id="loader-bar"></i></div>
+</div>
+
+<div id="progress"></div>
+
+<div id="cursor" aria-hidden="true">
+  <div class="cur-glow"></div>
+  <div class="cur-ring"></div>
+  <div class="cur-dot"></div>
+</div>
+
+<header id="site-header">
+  <div class="wrap nav-inner">
+    <a href="#hero" class="logo"><span class="logo-mark">TS</span> TamilSelvan V</a>
+    <nav class="desk-nav" id="desk-nav">
+      <a href="#hero" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#certifications" class="nav-link">Certificates</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#" class="btn btn-primary" id="resume-btn-nav">Resume</a>
+      <button class="burger" id="burger-btn" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+  <a href="#hero" class="m-link">Home</a>
+  <a href="#about" class="m-link">About</a>
+  <a href="#skills" class="m-link">Skills</a>
+  <a href="#projects" class="m-link">Projects</a>
+  <a href="#experience" class="m-link">Experience</a>
+  <a href="#education" class="m-link">Education</a>
+  <a href="#certifications" class="m-link">Certificates</a>
+  <a href="#contact" class="m-link">Contact</a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-left">
+      <div class="eyebrow reveal">SEO Specialist · WordPress Developer · Digital Marketer</div>
+      <h1 class="hero-h1">
+        <span class="line reveal">Hi, I'm TamilSelvan V.</span>
+        <span class="line reveal">I optimize websites.</span>
+        <span class="line reveal">I drive <span class="accent-word">growth</span>.</span>
+      </h1>
+      <p class="hero-desc reveal">I help businesses improve online visibility through SEO, WordPress, Technical SEO, Google Business Profile optimization, and data-driven digital marketing — building search-optimized websites that deliver measurable growth.</p>
+      <div class="hero-btns reveal">
+        <a href="#projects" class="btn btn-primary">View My Projects <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+        <a href="#" class="btn btn-ghost" id="resume-btn-hero">Download Resume <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></a>
+      </div>
+      <div class="tech-row reveal">
+        <div class="tech-pill"><img src="https://cdn.simpleicons.org/wordpress/0066FF" alt="WordPress" style="width:15px;height:15px;object-fit:contain;"> WordPress</div>
+        <div class="tech-pill"><img src="https://cdn.simpleicons.org/googleanalytics/E37400" alt="GA4" style="width:15px;height:15px;object-fit:contain;"> GA4</div>
+        <div class="tech-pill"><img src="https://cdn.simpleicons.org/googlesearchconsole/458CF5" alt="Search Console" style="width:15px;height:15px;object-fit:contain;"> Search Console</div>
+        <div class="tech-pill"><img src="https://cdn.simpleicons.org/semrush/FF642D" alt="Semrush" style="width:15px;height:15px;object-fit:contain;"> Semrush</div>
+        <div class="tech-pill"><img src="https://www.google.com/s2/favicons?domain=ahrefs.com&sz=64" alt="Ahrefs" style="width:15px;height:15px;object-fit:contain;border-radius:3px;"> Ahrefs</div>
+      </div>
+      <div class="hero-badges reveal">
+        <div class="glass stat-card"><div class="n">Multiple</div><div class="l">SEO Projects Delivered</div></div>
+        <div class="glass stat-card"><div class="n">Active</div><div class="l">GBP Optimization</div></div>
+        <div class="glass stat-card"><div class="n">Growing</div><div class="l">Toolset &amp; Certifications</div></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hv-stage" id="hv-stage">
+
+        <!-- Ambient background atmosphere -->
+        <div class="hv-halo"></div>
+        <div class="hv-rays"></div>
+        <div class="hv-rings">
+          <span class="hv-ring r1"></span>
+          <span class="hv-ring r2"></span>
+          <span class="hv-ring r3"></span>
+        </div>
+        <svg class="hv-network" viewBox="0 0 560 640" xmlns="http://www.w3.org/2000/svg">
+          <line x1="60" y1="110" x2="210" y2="190"></line>
+          <line x1="210" y1="190" x2="150" y2="380"></line>
+          <line x1="210" y1="190" x2="410" y2="150"></line>
+          <line x1="410" y1="150" x2="500" y2="300"></line>
+          <line x1="150" y1="380" x2="320" y2="470"></line>
+          <line x1="320" y1="470" x2="480" y2="430"></line>
+          <line x1="500" y1="300" x2="480" y2="430"></line>
+          <circle cx="60" cy="110" r="3"></circle>
+          <circle cx="210" cy="190" r="3"></circle>
+          <circle cx="150" cy="380" r="3"></circle>
+          <circle cx="410" cy="150" r="3"></circle>
+          <circle cx="500" cy="300" r="3"></circle>
+          <circle cx="320" cy="470" r="3"></circle>
+          <circle cx="480" cy="430" r="3"></circle>
+        </svg>
+        <div class="hv-smoke s1"></div>
+        <div class="hv-smoke s2"></div>
+
+        <div class="hv-particle" style="top:10%; left:14%; animation-delay:0s; animation-duration:6.5s;"></div>
+        <div class="hv-particle" style="top:16%; left:82%; animation-delay:.7s; animation-duration:8s;"></div>
+        <div class="hv-particle" style="top:32%; left:6%; animation-delay:1.4s; animation-duration:7.2s;"></div>
+        <div class="hv-particle" style="top:28%; left:92%; animation-delay:.3s; animation-duration:6.8s;"></div>
+        <div class="hv-particle" style="top:50%; left:2%; animation-delay:2s; animation-duration:7.6s;"></div>
+        <div class="hv-particle" style="top:54%; left:96%; animation-delay:1.1s; animation-duration:8.4s;"></div>
+        <div class="hv-particle" style="top:70%; left:10%; animation-delay:.5s; animation-duration:7s;"></div>
+        <div class="hv-particle" style="top:74%; left:88%; animation-delay:1.8s; animation-duration:6.4s;"></div>
+        <div class="hv-particle" style="top:88%; left:30%; animation-delay:.9s; animation-duration:7.8s;"></div>
+        <div class="hv-particle" style="top:86%; left:66%; animation-delay:1.5s; animation-duration:6.9s;"></div>
+        <div class="hv-particle" style="top:4%; left:44%; animation-delay:.2s; animation-duration:7.4s;"></div>
+        <div class="hv-particle" style="top:60%; left:50%; animation-delay:1.2s; animation-duration:8.1s;"></div>
+
+        <!-- Ranking chip -->
+        <div class="hv-rank glass">
+          <div class="hv-rank-pos">#<span id="rank-number">1</span></div>
+          <div class="hv-rank-lbl">Ranking Focus</div>
+        </div>
+
+        <!-- Glow platform (levitation ground) -->
+        <div class="hv-platform">
+          <span class="hv-platform-glow"></span>
+          <span class="hv-platform-ring pr1"></span>
+          <span class="hv-platform-ring pr2"></span>
+        </div>
+
+        <!-- Floating glass frame + portrait -->
+        <div class="hv-frame-wrap" id="hv-frame-wrap">
+          <div class="hv-floater">
+            <div class="hv-frame">
+              <span class="hv-frame-sheen"></span>
+              <span class="hv-frame-edge"></span>
+            </div>
+            <img class="hv-portrait" src="assets/images/hero-portrait.webp" alt="TamilSelvan V Portrait" />
+          </div>
+        </div>
+
+        <!-- Floating tool cards -->
+        <div class="hv-tool glass t1"><img src="https://cdn.simpleicons.org/wordpress/0066FF" alt="WordPress" loading="lazy"><span>WordPress</span></div>
+        <div class="hv-tool glass t2"><img src="https://cdn.simpleicons.org/googleanalytics/E37400" alt="GA4" loading="lazy"><span>Google Analytics 4</span></div>
+        <div class="hv-tool glass t3"><img src="https://cdn.simpleicons.org/googlesearchconsole/458CF5" alt="Search Console" loading="lazy"><span>Search Console</span></div>
+        <div class="hv-tool glass t4"><img src="https://cdn.simpleicons.org/semrush/FF642D" alt="Semrush" loading="lazy"><span>Semrush</span></div>
+        <div class="hv-tool glass t5"><img src="https://www.google.com/s2/favicons?domain=ahrefs.com&sz=64" alt="Ahrefs" loading="lazy"><span>Ahrefs</span></div>
+        <div class="hv-tool glass t6"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg><span>Technical SEO</span></div>
+        <div class="hv-tool glass t7"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>Local SEO</span></div>
+        <div class="hv-tool glass t8"><img src="https://www.google.com/s2/favicons?domain=business.google.com&sz=64" alt="Business Profile" loading="lazy"><span>Business Profile</span></div>
+
+        <!-- SEO performance dashboard -->
+        <div class="hv-dash glass reveal">
+          <div class="hv-dash-head"><span class="hv-dash-dot"></span> SEO PERFORMANCE</div>
+          <div class="hv-dash-row">
+            <span class="hv-dash-lbl">Organic Traffic</span>
+            <span class="hv-dash-val"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> +<b id="dash-traffic">180</b>%</span>
+          </div>
+          <div class="hv-dash-row">
+            <span class="hv-dash-lbl">Keywords Ranked</span>
+            <span class="hv-dash-val"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> <b id="dash-keywords">50</b>+</span>
+          </div>
+          <div class="hv-dash-row">
+            <span class="hv-dash-lbl">Leads Generated</span>
+            <span class="hv-dash-val"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> +<b id="dash-leads">75</b>%</span>
+          </div>
+          <svg class="hv-dash-graph" viewBox="0 0 180 40" preserveAspectRatio="none">
+            <polyline points="0,34 25,30 50,26 75,28 100,18 125,20 150,8 180,4"></polyline>
+          </svg>
+        </div>
+
+        <!-- Availability badge -->
+        <div class="hv-avail glass"><span class="hv-avail-dot"></span> Available for New Projects</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow reveal">About Me</div>
+    <h2 class="sec-heading reveal">Driven by curiosity, fueled by data</h2>
+
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="glass id-card">
+          <div class="about-photo-card">
+            <img src="assets/images/about-photo.webp" alt="TamilSelvan V" />
+          </div>
+
+          <div class="signature-block">
+            <span class="sig-name">TamilSelvan V</span>
+            <span class="sig-role">SEO Specialist &amp; WordPress Developer</span>
+          </div>
+
+          <div class="id-line"><span>Specialization</span><strong>SEO &amp; WordPress</strong></div>
+          <div class="id-line"><span>Experience</span><strong>Digital Marketing Executive</strong></div>
+          <div class="id-line"><span>Location</span><strong>Tamil Nadu, India</strong></div>
+          <div class="id-line"><span>Focus</span><strong>Organic Growth &amp; Tech SEO</strong></div>
+          <div class="id-line"><span>Status</span><strong style="color:var(--accent);">Open to Opportunities</strong></div>
+        </div>
+
+        <div class="quote-card reveal">
+          <p>"Every website has untapped ranking potential. My goal is to find it, optimize it, and turn search visibility into measurable business growth."</p>
+        </div>
+      </div>
+
+      <div class="about-content reveal">
+        <p style="font-size:18px; line-height:1.75; color:var(--text); margin-bottom:20px;">
+          I am a results-oriented <strong style="color:var(--accent);">SEO Specialist</strong> and <strong style="color:var(--accent);">WordPress Developer</strong> passionate about helping businesses grow their search visibility, organic traffic, and lead generation.
+        </p>
+        <p style="font-size:15.5px; line-height:1.75; color:var(--muted); margin-bottom:20px;">
+          My journey in digital marketing started with deep curiosity about how search engines rank content and how websites can be engineered to perform better. Today, I work across Technical SEO, On-Page optimization, Local SEO, Google Business Profile management, and WordPress development to build fast, search-ready digital assets.
+        </p>
+        <p style="font-size:15.5px; line-height:1.75; color:var(--muted); margin-bottom:32px;">
+          I take a structured, analytical approach to every project — combining keyword research, technical audits, performance tracking (GA4 &amp; GSC), and continuous optimization to deliver real business outcomes.
+        </p>
+
+        <div class="strength-list">
+          <div class="glass strength">
+            <div class="strength-ic"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg></div>
+            <h4>Data-Driven Strategy</h4>
+            <p>Every optimization decision is backed by analytics, search console insights, and competitive research.</p>
+          </div>
+          <div class="glass strength">
+            <div class="strength-ic"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></div>
+            <h4>Performance Focus</h4>
+            <p>Fast-loading, technically sound WordPress websites that provide great user experience and pass Core Web Vitals.</p>
+          </div>
+          <div class="glass strength">
+            <div class="strength-ic"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <h4>Local SEO Expertise</h4>
+            <p>Helping local businesses dominate nearby search results through GBP optimization and citation management.</p>
+          </div>
+          <div class="glass strength">
+            <div class="strength-ic"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+            <h4>Continuous Optimization</h4>
+            <p>Regular auditing, ranking tracking, content refreshes, and proactive adjustments to algorithmic updates.</p>
+          </div>
+        </div>
+
+        <div class="value-block">
+          <h4>Core Values &amp; Approach</h4>
+          <div class="value-tags">
+            <span>Data Over Assumptions</span>
+            <span>Ethical / White-Hat SEO</span>
+            <span>Continuous Learning</span>
+            <span>Business-Outcome Driven</span>
+            <span>Clear Reporting &amp; Transparency</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <div class="eyebrow reveal">Skills &amp; Expertise</div>
+        <h2 class="sec-heading reveal" style="max-width:560px; margin-bottom:0;">A complete skillset built for modern search</h2>
+      </div>
+      <p class="sec-sub reveal">A comprehensive toolkit spanning technical search optimization, WordPress engineering, data analytics, and digital marketing execution.</p>
+    </div>
+
+    <div class="skills-grid" id="skills-grid">
+      <div class="glass skill-card reveal">
+        <div class="top"><div class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div><h4>Search Engine Optimization</h4></div>
+        <p>Improve organic visibility through strategic SEO implementation.</p>
+        <div class="chip-row"><span>Keyword Research</span><span>On-Page SEO</span><span>Technical SEO</span><span>Off-Page SEO</span><span>Local SEO</span><span>SEO Audit</span><span>Content Optimization</span></div>
+      </div>
+      <div class="glass skill-card reveal">
+        <div class="top"><div class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></svg></div><h4>WordPress</h4></div>
+        <p>Develop, manage, and optimize WordPress websites for performance and search.</p>
+        <div class="chip-row"><span>WordPress CMS</span><span>Elementor</span><span>Theme Customization</span><span>Plugin Management</span><span>Performance Optimization</span><span>WooCommerce</span></div>
+      </div>
+      <div class="glass skill-card reveal">
+        <div class="top"><div class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div><h4>Analytics &amp; Tracking</h4></div>
+        <p>Measure user behaviour and website performance using modern analytics tools.</p>
+        <div class="chip-row"><span>GA4</span><span>Search Console</span><span>Tag Manager</span><span>Microsoft Clarity</span><span>Conversion Tracking</span></div>
+      </div>
+      <div class="glass skill-card reveal">
+        <div class="top"><div class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h4>SEO &amp; Marketing Tools</h4></div>
+        <p>Daily tools used for research, optimization, and reporting.</p>
+        <div class="chip-row"><span>Semrush</span><span>Ahrefs</span><span>Ubersuggest</span><span>Screaming Frog</span><span>Google Business Profile</span><span>Canva</span></div>
+      </div>
+      <div class="glass skill-card reveal">
+        <div class="top"><div class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></div><h4>Web Technologies</h4></div>
+        <p>Foundational web technologies used while working with websites.</p>
+        <div class="chip-row"><span>HTML5</span><span>CSS3</span><span>Responsive Design</span><span>JavaScript Basics</span></div>
+      </div>
+      <div class="glass skill-card reveal">
+        <div class="top"><div class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h4>Professional Skills</h4></div>
+        <p>Essential workplace and communication skills.</p>
+        <div class="chip-row"><span>Problem Solving</span><span>Communication</span><span>Time Management</span><span>Attention to Detail</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TOOLS MARQUEE ===================== -->
+<section id="tools-marquee" style="padding:60px 0;">
+  <div class="wrap tools-title">
+    <div class="eyebrow reveal" style="justify-content:center;">Tools &amp; Technologies</div>
+    <h2 class="sec-heading reveal">Technologies I work with daily</h2>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track" id="marquee-track">
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/wordpress/0066FF" alt="WordPress" loading="lazy" /><span>WordPress</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/googleanalytics/E37400" alt="Google Analytics 4" loading="lazy" /><span>Google Analytics 4</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/googlesearchconsole/458CF5" alt="Search Console" loading="lazy" /><span>Search Console</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/googletagmanager/246FDB" alt="Tag Manager" loading="lazy" /><span>Tag Manager</span></div>
+      <div class="tool-badge"><img src="https://www.google.com/s2/favicons?domain=business.google.com&sz=64" alt="Business Profile" loading="lazy" /><span>Business Profile</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/semrush/FF642D" alt="Semrush" loading="lazy" /><span>Semrush</span></div>
+      <div class="tool-badge"><img src="https://www.google.com/s2/favicons?domain=ahrefs.com&sz=64" alt="Ahrefs" loading="lazy" /><span>Ahrefs</span></div>
+      <div class="tool-badge"><img src="https://www.google.com/s2/favicons?domain=screamingfrog.co.uk&sz=64" alt="Screaming Frog" loading="lazy" /><span>Screaming Frog</span></div>
+      <div class="tool-badge"><img src="https://www.google.com/s2/favicons?domain=clarity.microsoft.com&sz=64" alt="Microsoft Clarity" loading="lazy" /><span>Microsoft Clarity</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva" loading="lazy" /><span>Canva</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" loading="lazy" /><span>HTML5</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3" loading="lazy" /><span>CSS3</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/googlechrome/4285F4" alt="Chrome DevTools" loading="lazy" /><span>Chrome DevTools</span></div>
+      <!-- Duplicate for seamless loop -->
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/wordpress/0066FF" alt="WordPress" loading="lazy" /><span>WordPress</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/googleanalytics/E37400" alt="Google Analytics 4" loading="lazy" /><span>Google Analytics 4</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/googlesearchconsole/458CF5" alt="Search Console" loading="lazy" /><span>Search Console</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/googletagmanager/246FDB" alt="Tag Manager" loading="lazy" /><span>Tag Manager</span></div>
+      <div class="tool-badge"><img src="https://www.google.com/s2/favicons?domain=business.google.com&sz=64" alt="Business Profile" loading="lazy" /><span>Business Profile</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/semrush/FF642D" alt="Semrush" loading="lazy" /><span>Semrush</span></div>
+      <div class="tool-badge"><img src="https://www.google.com/s2/favicons?domain=ahrefs.com&sz=64" alt="Ahrefs" loading="lazy" /><span>Ahrefs</span></div>
+      <div class="tool-badge"><img src="https://www.google.com/s2/favicons?domain=screamingfrog.co.uk&sz=64" alt="Screaming Frog" loading="lazy" /><span>Screaming Frog</span></div>
+      <div class="tool-badge"><img src="https://www.google.com/s2/favicons?domain=clarity.microsoft.com&sz=64" alt="Microsoft Clarity" loading="lazy" /><span>Microsoft Clarity</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva" loading="lazy" /><span>Canva</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" loading="lazy" /><span>HTML5</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3" loading="lazy" /><span>CSS3</span></div>
+      <div class="tool-badge"><img src="https://cdn.simpleicons.org/googlechrome/4285F4" alt="Chrome DevTools" loading="lazy" /><span>Chrome DevTools</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <div class="eyebrow reveal">Featured Projects</div>
+        <h2 class="sec-heading reveal" style="max-width:560px; margin-bottom:0;">Projects that delivered real business value</h2>
+      </div>
+      <p class="sec-sub reveal">A collection of SEO, WordPress, and digital marketing projects focused on improving search visibility, website performance, and business growth.</p>
+    </div>
+
+    <div class="proj-grid" id="proj-grid">
+      <div class="glass proj-card reveal" onclick="openModal(0)">
+        <div class="proj-thumb"><span class="cat">Education</span></div>
+        <div class="proj-body">
+          <h4>Right Educate</h4>
+          <p>Improved the online visibility of an education consultancy through SEO, Google Business Profile optimization, website optimization, and digital marketing activities.</p>
+          <div class="proj-tags"><span>SEO</span><span>Local SEO</span><span>WordPress</span><span>GBP</span></div>
+          <span class="proj-link">View Case Study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </div>
+      </div>
+      <div class="glass proj-card reveal" onclick="openModal(1)">
+        <div class="proj-thumb"><span class="cat">E-Commerce</span></div>
+        <div class="proj-body">
+          <h4>Natural Agarbatti</h4>
+          <p>Improved search engine visibility and website performance for an e-commerce business selling natural agarbatti products.</p>
+          <div class="proj-tags"><span>E-Commerce SEO</span><span>Technical SEO</span><span>Content SEO</span></div>
+          <span class="proj-link">View Case Study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </div>
+      </div>
+      <div class="glass proj-card reveal" onclick="openModal(2)">
+        <div class="proj-thumb"><span class="cat">Financial Services</span></div>
+        <div class="proj-body">
+          <h4>Trust Gold</h4>
+          <p>Improved website structure and local SEO strategy to strengthen online visibility for financial service locations.</p>
+          <div class="proj-tags"><span>SEO</span><span>Local SEO</span><span>Technical SEO</span></div>
+          <span class="proj-link">View Case Study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </div>
+      </div>
+      <div class="glass proj-card reveal" onclick="openModal(3)">
+        <div class="proj-thumb"><span class="cat">Study Abroad Consultancy</span></div>
+        <div class="proj-body">
+          <h4>AdmissionGyan</h4>
+          <p>Optimized study abroad landing pages targeting high-intent search keywords while improving website structure and organic search visibility.</p>
+          <div class="proj-tags"><span>SEO</span><span>Content Marketing</span><span>WordPress</span></div>
+          <span class="proj-link">View Case Study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </div>
+      </div>
+      <div class="glass proj-card reveal" onclick="openModal(4)">
+        <div class="proj-thumb"><span class="cat">Education</span></div>
+        <div class="proj-body">
+          <h4>Boston Institute of Analytics</h4>
+          <p>Worked on improving SEO performance for professional certification course pages through content optimization and technical improvements.</p>
+          <div class="proj-tags"><span>SEO</span><span>Analytics</span><span>Education</span></div>
+          <span class="proj-link">View Case Study <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="proj-modal">
+  <div class="modal-box" id="modal-box"></div>
+</div>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="justify-content:center; display:flex;">Experience</div>
+    <h2 class="sec-heading reveal" style="text-align:center; margin:0 auto 18px; max-width:600px;">Professional experience &amp; career journey</h2>
+    <p class="sec-sub reveal" style="text-align:center; margin:0 auto 70px;">Hands-on experience in SEO, WordPress, Google Business Profile optimization, website performance, analytics, and digital marketing through real-world business projects.</p>
+
+    <div class="timeline">
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="glass t-card">
+          <span class="t-badge">Current</span>
+          <h4>Digital Marketing Executive</h4>
+          <div class="co">Right Educate</div>
+          <div class="dur">Present</div>
+          <p>Focused on SEO, WordPress optimization, Google Business Profile management, Local SEO, analytics, content optimization and digital marketing activities including audits, reporting, and website maintenance.</p>
+          <div class="t-chip-row">
+            <span>WordPress</span><span>GA4</span><span>Search Console</span><span>GBP</span><span>Semrush</span><span>Ahrefs</span><span>Clarity</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="glass t-card">
+          <h4>Digital Marketing Intern</h4>
+          <div class="co">Getin Technology</div>
+          <div class="dur">3 Months</div>
+          <p>Learned and implemented practical digital marketing strategies, website optimization, SEO fundamentals, content optimization and analytics — the foundation of my professional journey.</p>
+          <div class="t-chip-row">
+            <span>WordPress Basics</span><span>Google Analytics</span><span>Search Console</span><span>Canva</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass" style="max-width:900px; margin:60px auto 0; padding:32px 36px; border-radius:22px;">
+      <h4 style="font-family:var(--font-display); font-size:16px; margin-bottom:12px; color:var(--accent);">What I Work On</h4>
+      <div class="chip-row">
+        <span>Search Engine Optimization</span><span>Technical SEO</span><span>Local SEO</span><span>Google Business Profile</span>
+        <span>WordPress Management</span><span>Keyword Research</span><span>Website Audits</span><span>Analytics &amp; Reporting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION ===================== -->
+<section id="education">
+  <div class="wrap">
+    <div class="eyebrow reveal">Education</div>
+    <h2 class="sec-heading reveal" style="max-width:600px;">Building knowledge through education</h2>
+    <p class="sec-sub reveal" style="margin-bottom:60px;">A strong educational foundation combined with continuous professional learning has shaped my practical expertise in SEO, WordPress, analytics, and digital marketing.</p>
+
+    <div class="edu-grid">
+      <div class="glass edu-card reveal">
+        <span class="status">Completed</span>
+        <div class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
+        <h4>Bachelor of Engineering (B.E.)</h4>
+        <div class="inst">Mahendra Engineering College</div>
+        <div class="spec">Specialization — Cyber Security</div>
+        <p>Built a strong technical foundation in networking, web technologies, cybersecurity concepts, analytical thinking, and problem solving.</p>
+      </div>
+      <div class="glass edu-card reveal">
+        <span class="status">Completed</span>
+        <div class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 12h2"/><path d="M22 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h4>Diploma</h4>
+        <div class="inst">Sri Bohar Polytechnic College</div>
+        <div class="spec">Specialization — Mechanical Engineering</div>
+        <p>Developed engineering fundamentals, technical discipline, practical learning, and structured problem-solving skills.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CERTIFICATIONS ===================== -->
+<section id="certifications">
+  <div class="wrap">
+    <div class="eyebrow reveal" style="justify-content:center; display:flex;">Certifications</div>
+    <h2 class="sec-heading reveal" style="text-align:center; margin:0 auto 18px; max-width:600px;">Committed to continuous learning</h2>
+    <p class="sec-sub reveal" style="text-align:center; margin:0 auto 60px;">Verified certifications in SEO, analytics, and digital marketing — earned through Google, HubSpot Academy, Semrush Academy, and Great Learning.</p>
+
+    <div class="cert-grid" id="cert-grid">
+      <div class="glass cert-card reveal" onclick="openCertModal(0)">
+        <div class="cert-thumb">
+          <img src="assets/images/cert-google-analytics.jpg" alt="Google Analytics Certification" loading="lazy" />
+          <div class="cert-view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg> View Certificate</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-issuer">Google</div>
+          <h4>Google Analytics Certification</h4>
+          <div class="cert-meta">Issued Dec 15, 2025 · Expires Dec 15, 2026</div>
+        </div>
+      </div>
+      <div class="glass cert-card reveal" onclick="openCertModal(1)">
+        <div class="cert-thumb">
+          <img src="assets/images/cert-semrush-toolkit.jpg" alt="SEO Toolkit Crash Course" loading="lazy" />
+          <div class="cert-view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg> View Certificate</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-issuer">Semrush Academy</div>
+          <h4>SEO Toolkit Crash Course</h4>
+          <div class="cert-meta">Completed · Expires 13 Nov 2026</div>
+        </div>
+      </div>
+      <div class="glass cert-card reveal" onclick="openCertModal(2)">
+        <div class="cert-thumb">
+          <img src="assets/images/cert-hubspot-seo.jpg" alt="SEO Certified" loading="lazy" />
+          <div class="cert-view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg> View Certificate</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-issuer">HubSpot Academy</div>
+          <h4>SEO Certified</h4>
+          <div class="cert-meta">Valid Nov 14 2025 · Dec 14 2026</div>
+        </div>
+      </div>
+      <div class="glass cert-card reveal" onclick="openCertModal(3)">
+        <div class="cert-thumb">
+          <img src="assets/images/cert-hubspot-social-media.jpg" alt="Social Media Certified" loading="lazy" />
+          <div class="cert-view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg> View Certificate</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-issuer">HubSpot Academy</div>
+          <h4>Social Media Certified</h4>
+          <div class="cert-meta">Valid Nov 14 2025 · Dec 14 2027</div>
+        </div>
+      </div>
+      <div class="glass cert-card reveal" onclick="openCertModal(4)">
+        <div class="cert-thumb">
+          <img src="assets/images/cert-digital-marketing-fundamentals.jpg" alt="Fundamentals of Digital Marketing" loading="lazy" />
+          <div class="cert-view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg> View Certificate</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-issuer">Digital Marketing Course</div>
+          <h4>Fundamentals of Digital Marketing</h4>
+          <div class="cert-meta">Completed 13 Nov 2025</div>
+        </div>
+      </div>
+      <div class="glass cert-card reveal" onclick="openCertModal(5)">
+        <div class="cert-thumb">
+          <img src="assets/images/cert-great-learning-strategy.jpg" alt="Digital Marketing Strategy" loading="lazy" />
+          <div class="cert-view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg> View Certificate</div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-issuer">Great Learning</div>
+          <h4>Digital Marketing Strategy</h4>
+          <div class="cert-meta">Completed Nov 23, 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="cert-modal">
+  <div class="modal-box cert-modal-box" id="cert-modal-box"></div>
+</div>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow reveal">Contact</div>
+    <h2 class="sec-heading reveal" style="max-width:600px;">Let's build something great together</h2>
+    <p class="sec-sub reveal" style="margin-bottom:60px;">Whether you're looking for an SEO Specialist, WordPress Developer, or Digital Marketing professional — I'd be happy to discuss your project, career opportunity, or business goals.</p>
+
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <div class="glass c-info-card">
+          <div class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+          <div><div class="l">Email</div><div class="v">tamilselvan3002@gmail.com</div></div>
+        </div>
+        <div class="glass c-info-card">
+          <div class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="l">Phone</div><div class="v">+91 63823 28005</div></div>
+        </div>
+        <div class="glass c-info-card">
+          <div class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="l">Location</div><div class="v">Tamil Nadu, India</div></div>
+        </div>
+        <div class="glass c-info-card">
+          <div class="ic"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <div><div class="l">Current Role</div><div class="v">Digital Marketing Executive · Right Educate</div></div>
+        </div>
+
+        <div class="social-row">
+          <a href="#" class="social-btn glass" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="social-btn glass" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+          <a href="mailto:tamilselvan3002@gmail.com" class="social-btn glass" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+        </div>
+
+        <div class="avail-badge"><span class="avail-dot"></span> Available for full-time roles &amp; freelance projects</div>
+      </div>
+
+      <div class="contact-right reveal">
+        <div class="glass form-card">
+          <h3 style="font-size:22px; margin-bottom:8px;">Send a Message</h3>
+          <p style="font-size:14px; color:var(--muted); margin-bottom:24px;">Fill out the form below and I'll get back to you within 24 hours.</p>
+
+          <form id="contact-form" onsubmit="return handleForm(event)">
+            <div class="two-col">
+              <div class="field">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" required placeholder="John Doe" />
+              </div>
+              <div class="field">
+                <label for="email">Your Email *</label>
+                <input type="email" id="email" required placeholder="john@example.com" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="service">Service Interested In</label>
+              <input type="text" id="service" placeholder="e.g. SEO Audit, WordPress Website, Local SEO..." />
+            </div>
+            <div class="field">
+              <label for="message">Your Message *</label>
+              <textarea id="message" rows="5" required placeholder="Tell me about your project or opportunity..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              Send Message <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form-msg" id="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final CTA Banner -->
+    <div class="cta-block reveal" style="margin-top:90px;">
+      <div class="eyebrow" style="margin-bottom:16px;">Start A Conversation</div>
+      <h3>Ready to improve your search visibility?</h3>
+      <p>Let's collaborate to build a search-optimized WordPress website or execute a results-focused SEO strategy for your business.</p>
+      <div class="cta-btns">
+        <a href="mailto:tamilselvan3002@gmail.com" class="btn btn-primary">
+          Get in Touch <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
+        <a href="#" class="btn btn-ghost" id="resume-btn-cta">
+          Download Resume <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h4><span class="logo-mark" style="display:inline-flex; width:28px; height:28px; font-size:11px; margin-right:6px; vertical-align:middle;">TS</span> TamilSelvan V</h4>
+        <p style="margin-top:8px;">SEO Specialist &amp; WordPress Developer dedicated to data-driven growth.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certificates</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>&copy; 2026 TamilSelvan V. All rights reserved.</div>
+      <div>Designed for performance, accessibility &amp; search.</div>
+    </div>
+  </div>
+</footer>
+
+<div id="back-top" title="Back to top"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></div>
+
+<!-- Deferred Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" defer></script>
+<script src="js/main.js" defer></script>
+
+</body>
+</html>
