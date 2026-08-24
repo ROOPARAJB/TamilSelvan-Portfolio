@@ -217,7 +217,7 @@ section{position:relative; z-index:3; padding:100px 0;}
 }
 
 /* ================================================================
-   HEADER NAVIGATION & MOBILE BURGER DRAWER
+   HEADER NAVIGATION & MOBILE BURGER DRAWER (Alex Naghavi Style)
    ================================================================ */
 header{
   position:fixed; top:0; left:0; right:0; z-index:100;
@@ -230,6 +230,7 @@ header{
 header .wrap{width:100%;}
 .nav-inner{display:flex; align-items:center; justify-content:space-between;}
 .logo{display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-weight:700; font-size:17.5px; color:var(--text); transition:opacity .25s;}
+.logo:hover{opacity:.85;}
 .logo-mark{
   width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center;
   background:var(--text); color:#fff; font-size:13.5px; font-weight:800; box-shadow:0 4px 14px rgba(15,23,42,.15);
@@ -241,19 +242,22 @@ nav.desk-nav{display:flex; align-items:center; gap:4px; padding:4px 8px; border-
 nav.desk-nav a{
   position:relative; padding:8px 16px; font-size:13.5px; font-weight:600; color:var(--muted); border-radius:var(--radius-pill); transition:color .25s, background .25s;
 }
-nav.desk-nav a:hover, nav.desk-nav a.active{color:var(--accent); background:rgba(0,102,255,.05);}
+nav.desk-nav a:hover, nav.desk-nav a.active{color:var(--accent); background:rgba(0,85,255,.05);}
 
 .header-actions{display:flex; align-items:center; gap:12px;}
+
+/* Hamburger Button */
 .burger{
   display:none; width:44px; height:44px; border-radius:12px; border:1px solid var(--border);
   align-items:center; justify-content:center; cursor:pointer; background:#ffffff; color:var(--text); transition:all .25s ease;
-  position:relative; z-index:110;
+  position:relative; z-index:110; outline:none; -webkit-tap-highlight-color:transparent;
 }
-.burger:hover{border-color:var(--accent); color:var(--accent);}
-.burger-icon-close{display:none;}
+.burger:hover, .burger:active{border-color:var(--accent); color:var(--accent);}
+.burger .burger-icon-close{display:none;}
+.burger .burger-icon-open{display:flex; align-items:center; justify-content:center;}
 .burger.open{background:var(--accent); color:#ffffff; border-color:var(--accent);}
 .burger.open .burger-icon-open{display:none;}
-.burger.open .burger-icon-close{display:block;}
+.burger.open .burger-icon-close{display:flex; align-items:center; justify-content:center;}
 
 @media (max-width:920px){
   nav.desk-nav{display:none;}
@@ -261,20 +265,24 @@ nav.desk-nav a:hover, nav.desk-nav a.active{color:var(--accent); background:rgba
   .burger{display:flex;}
 }
 
-/* Mobile Drawer Menu */
+/* Mobile Drawer Menu (Curtain Slide-Down) */
 .mobile-menu{
-  position:fixed; top:76px; left:0; right:0; bottom:0; z-index:95; background:rgba(255,255,255,.98); backdrop-filter:blur(24px);
+  position:fixed; top:76px; left:0; right:0; bottom:0; z-index:95;
+  background:rgba(255,255,255,.98); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px);
   display:flex; flex-direction:column; padding:28px 24px;
   transform:translateY(-120%); opacity:0; pointer-events:none;
   transition:transform .38s var(--ease-sq), opacity .3s ease;
-  overflow-y:auto;
+  overflow-y:auto; -webkit-overflow-scrolling:touch;
 }
-.mobile-menu.open{transform:translateY(0); opacity:1; pointer-events:auto;}
+.mobile-menu.open{
+  transform:translateY(0); opacity:1; pointer-events:auto;
+}
 .mobile-menu-inner{display:flex; flex-direction:column;}
 .mobile-menu a.m-link{
-  font-family:var(--font-display); font-size:20px; font-weight:700; padding:16px 0; border-bottom:1px solid var(--border); color:var(--text); transition:color .2s;
+  font-family:var(--font-display); font-size:20px; font-weight:700; padding:16px 0; border-bottom:1px solid var(--border); color:var(--text); transition:color .2s, padding-left .2s;
+  display:block; width:100%; text-align:left;
 }
-.mobile-menu a.m-link:hover{color:var(--accent);}
+.mobile-menu a.m-link:hover, .mobile-menu a.m-link:active{color:var(--accent); padding-left:6px;}
 
 /* progress bar */
 #progress{
@@ -789,4 +797,231 @@ footer{padding:32px 0; border-top:1px solid var(--border); background:#ffffff; p
   pointer-events: none;
   transform: translate3d(-200px, -200px, 0);
   will-change: transform;
+}
+/* Touch / Mobile Cursor Fix: Disable custom cursor on mobile/touch screens for pure 120fps native touch feel */
+@media (hover: none), (max-width: 920px) {
+  #cursor {
+    display: none !important;
+  }
+  html.has-cursor, html.has-cursor * {
+    cursor: auto !important;
+  }
+}
+
+/* ================================================================
+   MOBILE & TABLET RESPONSIVENESS POLISH (320px - 768px)
+   ================================================================ */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+  .head-row {
+    margin-bottom: 36px;
+    gap: 20px;
+  }
+  .sec-heading {
+    font-size: clamp(26px, 6.5vw, 38px);
+    margin-bottom: 12px;
+  }
+  .sec-sub {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  
+  /* Hero on mobile */
+  #hero {
+    min-height: auto;
+    padding-top: 96px;
+    padding-bottom: 50px;
+  }
+  .hero-h1 {
+    font-size: clamp(28px, 7.5vw, 44px);
+    line-height: 1.15;
+    margin: 10px 0 16px;
+  }
+  .hero-desc {
+    font-size: 14.5px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .hero-btns .btn {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+  
+  .tech-row {
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .tech-pill {
+    padding: 6px 12px;
+    font-size: 11.5px;
+  }
+
+  .hero-badges {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    max-width: 100%;
+  }
+  .stat-card {
+    padding: 12px 8px;
+    text-align: center;
+  }
+  .stat-card .n {
+    font-size: 17px;
+  }
+  .stat-card .l {
+    font-size: 9.5px;
+    line-height: 1.3;
+  }
+
+  /* Hero stage mobile */
+  .hero-visual {
+    margin-top: 20px;
+    min-height: 380px;
+  }
+  .hv-stage {
+    max-width: 310px;
+    height: 380px;
+  }
+  .hv-frame {
+    width: 210px;
+    height: 310px;
+    border-radius: 120px 120px 28px 28px;
+  }
+  .hv-portrait {
+    width: 106%;
+    bottom: -2%;
+  }
+  .hv-platform {
+    width: 220px;
+    height: 50px;
+    bottom: 2%;
+  }
+  .hv-avail {
+    bottom: -15px;
+    font-size: 10px;
+    padding: 6px 14px;
+  }
+
+  /* About on mobile */
+  .about-grid {
+    gap: 32px;
+  }
+  .id-card {
+    padding: 24px 18px;
+  }
+  .sig-name {
+    font-size: 38px;
+  }
+  .strength-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .strength {
+    padding: 18px;
+  }
+  .quote-card {
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  /* Skills & Projects on mobile */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .skill-card {
+    padding: 24px 20px;
+  }
+  .metrics-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding: 20px 16px;
+    margin-top: 32px;
+  }
+  .metric-col {
+    gap: 10px;
+  }
+  .metric-col .m-ic {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .metric-col .m-val {
+    font-size: 20px;
+  }
+  .metric-col .m-lbl {
+    font-size: 10.5px;
+  }
+
+  /* Experience & Education on mobile */
+  .edu-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .edu-card {
+    padding: 24px 20px;
+  }
+  .edu-card .status {
+    position: static;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  /* Certifications on mobile */
+  .cert-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .cert-thumb {
+    height: 200px;
+  }
+
+  /* Contact on mobile */
+  .contact-grid {
+    gap: 28px;
+  }
+  .c-info-card {
+    padding: 16px 18px;
+  }
+  .form-card {
+    padding: 24px 18px;
+  }
+  
+  /* Modals on mobile */
+  .modal-box, .cert-lightbox-container {
+    padding: 24px 18px;
+    max-height: 88vh;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-badges {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .stat-card {
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .stat-card .l {
+    margin-top: 0;
+    text-align: right;
+  }
+  .metrics-bar {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }

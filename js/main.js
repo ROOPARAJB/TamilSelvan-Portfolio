@@ -168,128 +168,72 @@ function initApp() {
   if (appInitialized) return;
   appInitialized = true;
 
-  /* ---------- SILKY BUTTER SMOOTH SCROLL (Calibrated Momentum Damping) ---------- */
-  let lenis = null;
-  if (typeof Lenis !== 'undefined' && !REDUCE_MOTION) {
-    lenis = new Lenis({
-      duration: 1.35, // Smooth glide duration
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Apple cubic-exponential glide
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 0.85, // Calibrated so it never scrolls too fast
-      touchMultiplier: 1.1,
-      infinite: false,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    if (window.ScrollTrigger) {
-      lenis.on('scroll', ScrollTrigger.update);
-      gsap.ticker.add((time) => {
-        lenis.raf(time * 1000);
-      });
-      gsap.ticker.lagSmoothing(0);
-    }
-
-    // Smooth ease-in-out anchor scrolling helper
-    window.smoothScrollToTarget = function(targetEl) {
-      if (!targetEl) return;
-      const headerHeight = 76;
-      if (lenis) {
-        lenis.scrollTo(targetEl, {
-          offset: -headerHeight,
-          duration: 1.6, // Gentle duration
-          // Gentle cubic ease-in-out curve
-          easing: (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
-        });
-      } else {
-        const targetPos = targetEl.getBoundingClientRect().top + window.scrollY - headerHeight;
-        const startPos = window.scrollY;
-        const distance = targetPos - startPos;
-        const duration = 1300;
-        let startTime = null;
-        function easeInOutCubic(t) {
-          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-        }
-        function step(time) {
-          if (!startTime) startTime = time;
-          const progress = Math.min((time - startTime) / duration, 1);
-          window.scrollTo(0, startPos + distance * easeInOutCubic(progress));
-          if (progress < 1) requestAnimationFrame(step);
-        }
-        requestAnimationFrame(step);
-      }
-    };
-
-    // Universal navigation links listener with gentle ease-in-out
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (!href || href === '#') return;
-        const target = document.querySelector(href);
-        if (target) {
-          e.preventDefault();
-          const mobileMenu = document.getElementById('mobile-menu');
-          const burger = document.getElementById('burger-btn');
-          if (mobileMenu && mobileMenu.classList.contains('open')) {
-            mobileMenu.classList.remove('open');
-            if (burger) burger.classList.remove('open');
-            document.body.style.overflow = '';
-          }
-          window.smoothScrollToTarget(target);
-        }
-      });
-    });
-  }
-
-  const REDUCE_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const IS_FINE_POINTER = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const IS_FINE_POINTER = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
   }
 
-  /* ---------- Mobile Menu Toggle (Instant 2-way toggle) ---------- */
+  /* ---------- Instant Native Anchor Navigation with Header Offset ---------- */
+  window.smoothScrollToTarget = function(targetEl) {
+    if (!targetEl) return;
+    const headerHeight = 76;
+    const targetPos = targetEl.getBoundingClientRect().top + window.scrollY - headerHeight;
+    window.scrollTo({ top: targetPos, behavior: 'smooth' });
+  };
+
+  /* ---------- Mobile Menu (Rock-Solid 2-Way Toggle) ---------- */
   const burger = document.getElementById('burger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
 
-  if (burger && mobileMenu) {
-    burger.addEventListener('click', (e) => {
+  function toggleMobileMenu(e) {
+    if (e) {
+      e.preventDefault();
       e.stopPropagation();
-      const isOpen = mobileMenu.classList.toggle('open');
-      burger.classList.toggle('open', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
+    }
+    if (!mobileMenu || !burger) return;
+    const isOpen = mobileMenu.classList.toggle('open');
+    burger.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
 
-    document.querySelectorAll('.m-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        burger.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
+  function closeMobileMenu() {
+    if (!mobileMenu || !burger) return;
+    mobileMenu.classList.remove('open');
+    burger.classList.remove('open');
+    document.body.style.overflow = '';
+  }
 
-    // Close when clicking backdrop area
-    mobileMenu.addEventListener('click', (e) => {
-      if (e.target === mobileMenu) {
-        mobileMenu.classList.remove('open');
-        burger.classList.remove('open');
-        document.body.style.overflow = '';
-      }
+  if (burger) {
+    burger.addEventListener('click', toggleMobileMenu);
+    burger.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      toggleMobileMenu();
     });
   }
 
-            /* ---------- FLAWLESS BUTTER-SMOOTH CUSTOM CURSOR ENGINE ---------- */
+  // Intercept all internal anchor clicks
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (!href || href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        closeMobileMenu();
+        setTimeout(() => {
+          window.smoothScrollToTarget(target);
+        }, 80);
+      }
+    });
+  });
+
+  /* ---------- FLAWLESS BUTTER-SMOOTH CUSTOM CURSOR ENGINE ---------- */
   const curDot = document.querySelector('.cur-dot');
   const curRing = document.querySelector('.cur-ring');
   const curGlow = document.querySelector('.cur-glow');
 
-  if (curDot && curRing) {
+  if (curDot && curRing && IS_FINE_POINTER) {
     let mouseX = -100, mouseY = -100;
     let ringX = -100, ringY = -100;
     let glowX = -100, glowY = -100;
@@ -301,14 +245,10 @@ function initApp() {
 
       mouseX = clientX;
       mouseY = clientY;
-
-      // Dot follows immediately without lag
       curDot.style.transform = `translate3d(${mouseX - 4}px, ${mouseY - 4}px, 0)`;
     }
 
     window.addEventListener('mousemove', onPointerMove, { passive: true });
-    window.addEventListener('touchmove', onPointerMove, { passive: true });
-    window.addEventListener('touchstart', onPointerMove, { passive: true });
 
     // Hover detection on interactive elements
     const hoverElements = document.querySelectorAll('a, button, .btn, .glass, .skill-card, .cert-card, .edu-card, .tool-badge, .tech-pill, input, textarea, .logo, .stat-card');
@@ -319,8 +259,8 @@ function initApp() {
 
     // 120fps smooth elastic interpolation loop for the ring and glow
     function animateCursorRing() {
-      ringX += (mouseX - ringX) * 0.20;
-      ringY += (mouseY - ringY) * 0.20;
+      ringX += (mouseX - ringX) * 0.18;
+      ringY += (mouseY - ringY) * 0.18;
 
       glowX += (mouseX - glowX) * 0.08;
       glowY += (mouseY - glowY) * 0.08;
@@ -351,11 +291,7 @@ function initApp() {
     if (e.key === 'Escape') {
       window.closeModal();
       window.closeCertModal();
-      if (mobileMenu && burger) {
-        mobileMenu.classList.remove('open');
-        burger.classList.remove('open');
-        document.body.style.overflow = '';
-      }
+      closeMobileMenu();
     }
   });
 
@@ -390,7 +326,7 @@ function initApp() {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 102, 255, ${this.alpha})`;
+        ctx.fillStyle = `rgba(0, 85, 255, ${this.alpha})`;
         ctx.fill();
       }
     }
@@ -507,7 +443,18 @@ function initApp() {
       }
 
       const subject = encodeURIComponent('New Project Inquiry from ' + name + (service ? ' [' + service + ']' : ''));
-      const bodyText = `Hi Tamilselvan,\n\nHere are my project details:\n\n• Name: ${name}\n• Email: ${email}\n• Service: ${service || 'General Inquiry'}\n\n• Message:\n${message}\n\nLooking forward to hearing from you.`;
+      const bodyText = `Hi Tamilselvan,
+
+Here are my project details:
+
+• Name: ${name}
+• Email: ${email}
+• Service: ${service || 'General Inquiry'}
+
+• Message:
+${message}
+
+Looking forward to hearing from you.`;
       const mailtoUrl = 'mailto:tamilselvan3002@gmail.com?subject=' + subject + '&body=' + encodeURIComponent(bodyText);
 
       if (msgEl) {
